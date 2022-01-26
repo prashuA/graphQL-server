@@ -19,14 +19,15 @@ startServer();
 
 
 // Express: Port
-const PORT = 5000 || process.env;
+const PORT = process.env.PORT || 5000; 
+
 
 // Express: Listener
-
-APP.listen(process.env.PORT || 5000, function(){
-	// tslint:disable-next-line:no-console
+APP.listen(PORT, () => {
+  // tslint:disable-next-line:no-console
   console.log(`The server has started on port: ${PORT} \nhttp://localhost:${PORT}/graphql`);
 });
+
 
 
 
